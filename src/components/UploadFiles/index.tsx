@@ -23,7 +23,13 @@ const UploadFiles = () => {
   const UploadFiles = (event: ChangeEvent<HTMLInputElement>) => {
     let file = event.target.files?.[0];
 
-    fileUpload(file, parentid, email, setprogress);
+    fileUpload(
+      file,
+      parentid,
+      email,
+      //@ts-ignore
+      setprogress,
+    );
   };
   console.log(parentid);
   const uploadfolder = () => {
